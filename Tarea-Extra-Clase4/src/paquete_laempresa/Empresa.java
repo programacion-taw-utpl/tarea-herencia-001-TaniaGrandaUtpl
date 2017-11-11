@@ -10,11 +10,13 @@ import paquete_personal.Trabajador;
  * @author Usuario
  */
 public class Empresa {
+    //Atributos de la clase Empresa
     private String nombres;
     private String siglas;
     private String ciudad;
     private Trabajador[] trabajadores;
     
+    //Médotos establecer y obtener del atributo nombres
     public void establecer_nombres(String n){
         nombres = n;
     }
@@ -22,6 +24,7 @@ public class Empresa {
         return nombres;
     }
     
+    //Médotos establecer y obtener del atributo apellidos
     public void establecer_siglas(String sg){
         siglas = sg;
     }
@@ -29,6 +32,7 @@ public class Empresa {
         return siglas;
     }
     
+    //Médotos establecer y obtener del atributo ciudad
     public void establecer_ciudad(String c){
         ciudad = c;
     }
@@ -36,6 +40,7 @@ public class Empresa {
         return ciudad;
     }
 
+    //Médotos establecer y obtener del atributo trabajadores
     public void establecer_trabajadores(Trabajador[] t) {
         trabajadores = t;
     }
@@ -43,6 +48,7 @@ public class Empresa {
         return trabajadores;
     }
 
+    //Constructor con parámetros
     public Empresa(String n, String sg, String c, Trabajador[] t) {
         nombres = n;
         siglas = sg;
@@ -50,7 +56,8 @@ public class Empresa {
         trabajadores = t;
     }
     
-    public String lista_trabajadores(){
+    //Método para obtener todo el listado de trabajadores
+    public String lista_trabajadores(){  
         String lista = " ";
         for (int i = 0; i < trabajadores.length; i++) {
             lista += trabajadores[i];
@@ -58,12 +65,12 @@ public class Empresa {
         return lista;
     }
     
+    //Sobreescribimos el método toString
     @Override
     public String toString() {
         return String.format("Empresa: %s\n"
                 + "Siglas: %s\n"
                 + "Ciudad: %s\n"
-//                + "\nLista Trabajadores:\n"
                 ,obtener_nombres(),obtener_siglas(),obtener_ciudad());
     }
 }
