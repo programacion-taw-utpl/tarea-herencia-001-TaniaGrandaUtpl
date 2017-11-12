@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package paquete_personal;
-import paquete_laempresa.Empresa;
 
 /**
  *
@@ -50,7 +49,7 @@ public class Persona {
     }
     
     //Constructor con parámetros
-    public Persona(int num,String n, String apell, int eda, int ced) {
+    public Persona(String n, String apell, int eda, int ced) {
         nombres = n;
         apellidos = apell;
         edad = eda;
@@ -62,22 +61,12 @@ public class Persona {
         
     }
     
-    //Método para obtner el numeral de cada trabajador
-    public int num_persona(){
-        int num=0;
-        for (int i = 0; i < 2; i++) {
-            num++;
-        }
-        return num; 
-    }
-    
     //Sobreescribimos el método toString
     @Override
     public String toString() {
-        return String.format("\t%s)"
-                + "\t%s %s\n"
+        return String.format("\t%s %s\n"
                 + "\t\t%d años de edad\n"
                 + "\t\tCI: %s", 
-                num_persona(),obtener_nombres(), obtener_apellidos(), obtener_edad(), obtener_cedula());
+                obtener_nombres(), obtener_apellidos(), obtener_edad(), obtener_cedula());
     }  
 }

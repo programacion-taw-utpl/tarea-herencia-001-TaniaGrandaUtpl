@@ -56,13 +56,13 @@ public class Empresa {
         trabajadores = t;
     }
     
-    //Método para obtener todo el listado de trabajadores
+    //Método para obtener todo el listado de trabajadores con sus respectivos literales
     public String lista_trabajadores(){  
         String lista = " ";
         for (int i = 0; i < trabajadores.length; i++) {
-            lista += trabajadores[i];
+            lista += "\t" +(i+1)+ ")" +this.trabajadores[i].toString();
         }
-        return lista;
+            return lista;
     }
     
     //Sobreescribimos el método toString

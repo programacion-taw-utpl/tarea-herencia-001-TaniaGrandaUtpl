@@ -25,8 +25,8 @@ public class Principal {
         
         //Llamamos a la clase trabajores con parametros, y los guardamos en una array
         Trabajador lista_trabajadores[] = new Trabajador[2];
-        lista_trabajadores[0] = new Trabajador(t.num_persona(),"Ana Luisa", "Velez Alcivar", 30, 12903939, 100, 40, 10, t.obtener_sueldo());
-        lista_trabajadores[1] = new Trabajador(t.num_persona(),"Mario Anibal", "Vela Narvaez", 35, 212889, 100, 50, 10, t.obtener_sueldo());
+        lista_trabajadores[0] = new Trabajador("Ana Luisa", "Velez Alcivar", 30, 12903939, 100, 40, 10, t.obtener_sueldo());
+        lista_trabajadores[1] = new Trabajador("Mario Anibal", "Vela Narvaez", 35, 212889, 100, 50, 10, t.obtener_sueldo());
         
         //Llamamos a la clase Empresa_Privada con sus parametros
         Empresa_Privada e_p = new Empresa_Privada("Soluciones Software", "SS´s", "Loja", lista_trabajadores, 20000, 12);

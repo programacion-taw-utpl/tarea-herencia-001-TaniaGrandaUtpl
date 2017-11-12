@@ -46,8 +46,8 @@ public class Trabajador extends Persona{//Heredamos los atributos y métodos de 
     }
     
     //Constructor con parámetros
-    public Trabajador(int num, String n, String apell, int eda, int ced, double c_s, int h_t, double c_h, double s) {
-        super(num, n, apell, eda, ced);
+    public Trabajador(String n, String apell, int eda, int ced, double c_s, int h_t, double c_h, double s) {
+        super(n, apell, eda, ced);
         costo_seguro = c_s;
         horas_trabajadas = h_t;
         costo_por_hora = c_h;
@@ -61,7 +61,7 @@ public class Trabajador extends Persona{//Heredamos los atributos y métodos de 
     //Sobreescribimos el método toString
     @Override
     public String toString() {
-        String cadena = String.format("\n%s\n"
+        String cadena = String.format("%s\n"
                 + "\t\tSeguro: $%s\n"
                 + "\t\tHoras trabajadas: %s\n"
                 + "\t\tValor por Hora: %s\n"
